@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <body>
+  <title>Formulário </title>
+  <h1>Faça seu login</h1>
+  <form name="formulario" onsubmit= "return validarFormulario()" method="post">
+  <label for="usuario">Seu usuário:</label>
+  <input type="text" name="usuario" />
+  <br>
+  <br>
+  <label for="senha">Sua senha:</label>
+  <input type="password" name="senha" />
+  <br>
+  <br>
+</form>
+  
+   <script>
+         function validarFormulario(){
+        var usuarioPessoa = document.forms["formulario"]["senha"].value;
+        if (usuarioPessoa == "") {
+            alert("Favor informar o seu usuário e senha!");
+            return false;     
+        }
+        else{
+            alert("Sucesso!");
+            return true;
+        }
+    }
+   </script>
+</body> 
+   <input type="button" onclick=validarFormulario() value="Enviar"/>
+</html> 
+
+
+
+echo "# loginSenha" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Marianalsgomes/loginSenha.git
+git push -u origin main
